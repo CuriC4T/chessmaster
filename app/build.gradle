@@ -5,7 +5,9 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 30
     buildToolsVersion "29.0.3"
-
+    androidExtensions {
+        experimental = true
+    }
     defaultConfig {
         applicationId "com.curic4t.chessmaster"
         minSdkVersion 16
