@@ -99,9 +99,14 @@ class GameBoard : Fragment() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             piece_blank_array[0][1]?.setImageResource(R.mipmap.bqueen)
         }
+        setGameTouchEvent()
         //8...1 , a....h
 
 
+    }
+    public fun setGameTouchEvent(){
+        piece_blank_array[0][1]?.setOnTouchListener(GameTouchEvent())
+        piece_blank_array[0][1]?.setOnDragListener(GameTouchEvent())
     }
     companion object {
         @JvmStatic
@@ -113,4 +118,5 @@ class GameBoard : Fragment() {
                 }
             }
     }
+
 }
